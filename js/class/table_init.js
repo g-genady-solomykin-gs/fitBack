@@ -94,3 +94,38 @@ class TradeTable {
 
 const app = document.getElementById('init__trade');
 const tradeTable = new TradeTable(app);
+
+
+
+
+
+
+
+function openPopup(element) {
+  const popup = element.nextElementSibling;
+
+  if (popup) {
+    if (popup.style.display === 'block') {
+      popup.style.display = 'none';
+    } else {
+      const allPopups = document.querySelectorAll('.popup');
+      allPopups.forEach(p => p.style.display = 'none');
+
+      popup.style.display = 'block';
+    }
+  }
+}
+
+function toggleButton(input) {
+  const button = input.closest('.controll-popup').querySelector('.submitButton');
+  button.disabled = input.value.trim() === '';
+}
+
+document.addEventListener('click', function (event) {
+  const popups = document.querySelectorAll('.popup');
+  popups.forEach(popup => {
+    if (!popup.contains(event.target) && popup.previousElementSibling !== event.target) {
+      popup.style.display = 'none';
+    }
+  });
+});
