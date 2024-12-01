@@ -159,7 +159,6 @@ body {
 }
 .trade .switch-and-search {
   margin-top: 40px;
-  margin-bottom: 50px;
 }
 .trade .switch-and-search-wrapper {
   position: relative;
@@ -234,10 +233,10 @@ body {
 .trade .table__header-item {
   position: sticky;
   top: 0;
-  z-index: 25;
+  z-index: 15;
   font-weight: 400;
   text-align: left;
-  padding: 10px 10px 30px 10px;
+  padding: 50px 10px 30px 10px;
 }
 .trade .table__left-column {
   position: sticky;
@@ -263,7 +262,7 @@ body {
   padding: 20px 10px;
   font-weight: 700;
 }
-.trade .table__row-item input[type=text] {
+.trade .table__row-item-comment {
   max-width: 420px;
   width: 100%;
   padding: 8px 2px;
@@ -330,6 +329,7 @@ body {
   font-weight: 700;
 }
 .trade .table__row-item-missile {
+  position: relative;
   background-image: url("../img/icon/missile-gray.svg");
   background-size: contain;
   width: 16px;
